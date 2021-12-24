@@ -2,15 +2,10 @@
 
 import os
 
-for i in range(100):
-    path = r"C:\Users\JK\Desktop\电商资料\上新的\商品{}".format(i)
+for i in range(267, 350):
+    path = r"C:\Users\JK\Desktop\电商资料\上新251\LY{}".format(i)
     path = path.strip()
     isExists = os.path.exists(path)
     print(path)
     if not isExists:
         os.makedirs(path)
-        txtpath = path + r"\链接地址.txt"
-        open(txtpath, "w")
-        print(path, "创建成功")
-    else:
-        print(path, "已经存在")
